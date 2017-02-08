@@ -2,18 +2,16 @@ package demo;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import static io.restassured.path.json.JsonPath.*;
-
 import org.testng.annotations.Test;
-
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class Test6_jsonadv {
+public class Test6_groovyfunc {
 
 	/**
 	 * Verify is some expected name present in response or not
@@ -76,7 +74,6 @@ public class Test6_jsonadv {
 		List<String> ls = from(response).getList("RestResponse.result.findAll { it.name.length() > 40 }.name");
 		System.out.println(ls);  //[South Georgia and the South Sandwich Islands]
 	}
-	
 	
 	
 	

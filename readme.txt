@@ -3,7 +3,7 @@ Rest Assured framework to test rest web services
 
 #Introduction
 https://github.com/rest-assured/rest-assured/wiki/GettingStarted
-
+https://groups.google.com/forum/#!forum/rest-assured
 
 
 

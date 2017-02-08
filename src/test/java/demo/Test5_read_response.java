@@ -11,7 +11,11 @@ import static io.restassured.path.json.JsonPath.*;
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+
+
+
 
 public class Test5_read_response {
 
@@ -31,7 +35,7 @@ public class Test5_read_response {
 	 * To get all response as InputStream
 	 * @throws IOException 
 	 */
-	@Test
+	//@Test
 	public void testGetResponseAsInputStream() throws IOException{
 		InputStream stream = get("http://services.groupkt.com/country/get/iso2code/cn").asInputStream(); 
 		System.out.println(stream.toString().length());
@@ -44,7 +48,7 @@ public class Test5_read_response {
 	/**
 	 * To get all response as ByteArray
 	 */
-	@Test
+	//@Test
 	public void testGetResponseAsByteArray(){
 		byte[] byteArray = get("http://services.groupkt.com/country/get/iso2code/cn").asByteArray();
 		System.out.println(byteArray.length);
@@ -54,10 +58,10 @@ public class Test5_read_response {
 	
 
 	/**
-	 * Extract details as String for further calls
+	 * Extract details using path
 	 */
 	//@Test
-	public void testExtractDetailsForFurtherUse(){
+	public void testExtractDetailsUsingPath(){
 		String href=
 		when().
 			get("http://jsonplaceholder.typicode.com/photos/1").
@@ -71,6 +75,26 @@ public class Test5_read_response {
 		
 		
 		when().get(href).then().statusCode(200);
+	}
+	
+	
+	
+
+	/**
+	 * Extract details using path in one line
+	 */
+	//@Test
+	public void testExtractPathInOneLine(){
+		//type 1:
+		String href1= get("http://jsonplaceholder.typicode.com/photos/1").path("url");
+		System.out.println(href1);
+		when().get(href1).then().statusCode(200);
+		
+		
+		//type 2:
+		String href2 = get("http://jsonplaceholder.typicode.com/photos/1").andReturn().jsonPath().getString("thumbnailUrl");
+		System.out.println(href2);
+		when().get(href2).then().statusCode(200);
 	}
 	
 	
@@ -95,21 +119,5 @@ public class Test5_read_response {
 	
 	
 	
-	/**
-	 * Extract details as Response for further use
-	 */
-	//@Test
-	public void testJsonPath(){
-		Response response=
-		when().
-			get("http://jsonplaceholder.typicode.com/photos/1").
-		then().
-		extract().
-			response();
-		
-		System.out.println("Content Type: "+response.contentType());
-		System.out.println("Href: "+response.path("url"));
-		System.out.println("Status Code: "+response.statusCode());
-	}
-
+	
 }
