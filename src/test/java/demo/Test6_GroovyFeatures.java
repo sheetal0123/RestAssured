@@ -11,7 +11,7 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class Test6_groovyfunc {
+public class Test6_GroovyFeatures {
 
 	/**
 	 * Verify is some expected name present in response or not

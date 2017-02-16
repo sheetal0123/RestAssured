@@ -2,22 +2,14 @@ package demo;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import static io.restassured.path.json.JsonPath.*;
-
 import org.testng.annotations.Test;
-
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 
-
-
-public class Test5_read_response {
+public class Test5_ReadResponseInDiffWays {
 
 	/**
 	 * To get all response as String
@@ -103,7 +95,7 @@ public class Test5_read_response {
 	/**
 	 * Extract details as Response for further use
 	 */
-	//@Test
+	@Test
 	public void testExtractDetailsUsingResponse(){
 		Response response=
 		when().
@@ -115,6 +107,7 @@ public class Test5_read_response {
 		System.out.println("Content Type: "+response.contentType());
 		System.out.println("Href: "+response.path("url"));
 		System.out.println("Status Code: "+response.statusCode());
+		
 	}
 	
 	

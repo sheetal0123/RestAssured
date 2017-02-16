@@ -15,7 +15,7 @@ public class Test7_JsonPath {
 
 	
 	/**
-	 * Extract details as String and fetching further details
+	 * Extract details as String and fetching further details w/o using json path
 	 */
 	//@Test
 	public void testJsonPath1(){

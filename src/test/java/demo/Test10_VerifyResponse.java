@@ -13,7 +13,7 @@ import io.restassured.matcher.ResponseAwareMatcherComposer.*;
  * @author sheetalsingh
  *
  */
-public class Test10_verify_response {
+public class Test10_VerifyResponse {
 
 
 
@@ -69,7 +69,7 @@ public class Test10_verify_response {
 	/**
 	 * body attribute verification using java 8 lambda expression
 	 */
-	@Test
+	//@Test
 	public void testBodyParametersInResponse(){
 		
 		given().
@@ -96,17 +96,13 @@ public class Test10_verify_response {
 	
 	
 	
-	
-	
-	
 	/**
 	 * todo: Not working 
+	 * cookie value changing, need diff call
 	 */
-	//@Test
+	@Test
 	public void testCookiesInResponse(){
-		given().get("http://jsonplaceholder.typicode.com/photos/").then().assertThat().cookie("CF-Cache-Status","REVALIDATED");
-		given().get("http://jsonplaceholder.typicode.com/photos/").then().assertThat().cookies("Connection","keep-alive","Server","cloudflare-nginx");
-		given().get("http://jsonplaceholder.typicode.com/photos/").then().assertThat().cookie("X-Cache",containsString("localhost"));
+		given().get("http://jsonplaceholder.typicode.com/comments").then().log().all().assertThat().cookie("__cfduid","db8a58dc77654193b3bbd9bba0c7642a81486464587");
 	}
 	
 	

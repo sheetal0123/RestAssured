@@ -26,7 +26,7 @@ import io.restassured.response.Response;
  * @author sheetalsingh
  *
  */
-public class Test9_set_request_data {
+public class Test9_SetRequestData {
 
 	/**
 	 * Generally CONNECT used with HTTPS request

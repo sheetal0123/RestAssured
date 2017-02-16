@@ -17,13 +17,13 @@ import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class Test8_get_headers_cookies {
+public class Test8_GetHeadersAndCookies {
 
 	/**
 	 * To get response headers
 	 */
 	@Test
-	public void testHeaders(){
+	public void testResponseHeaders(){
 		Response response = get("http://jsonplaceholder.typicode.com/photos");
 		
 		//to get single header
@@ -36,6 +36,10 @@ public class Test8_get_headers_cookies {
 			System.out.println(h.getName()+":"+h.getValue());
 		}
 	}
+	
+	
+	
+	
 	
 	
 	/**
@@ -51,6 +55,8 @@ public class Test8_get_headers_cookies {
 		}
 	
 	}
+	
+	
 	
 	
 	

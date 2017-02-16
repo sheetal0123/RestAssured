@@ -11,12 +11,15 @@ import io.restassured.RestAssured;
 import io.restassured.config.RestAssuredConfig;
 import io.restassured.config.XmlConfig;
 
-public class Test5_xmladv {
+/**
+ * NOT FOR DEMO AS OF NOW
+ */
+public class Test5_todo {
 	
 	/**
 	 * Example 3: pending, need a good xml 
 	 */
-	@Test
+	//@Test
 	public void test1() {
 		String res = get("http://httpbin.org/xml").asString();
 		System.out.println(res);
@@ -32,7 +35,7 @@ public class Test5_xmladv {
 	/**
 	 * todo: not working
 	 */
-	//@Test
+	@Test
 	public void testX2() {
 		given().
 			get("http://httpbin.org/xml").

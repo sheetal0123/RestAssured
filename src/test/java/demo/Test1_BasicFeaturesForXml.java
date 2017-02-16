@@ -8,19 +8,24 @@ import io.restassured.RestAssured;
 import io.restassured.config.RestAssuredConfig;
 import io.restassured.config.XmlConfig;
 
-public class Test1_basics_xml {
+public class Test1_BasicFeaturesForXml {
 
 	/**
 	 * To test xml response for single body content
 	 */
 	// @Test
-	public void test1() {
+	public void testSingleContent() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
 		then().
-			body("CUSTOMER.ID", equalTo("10")).log().all();
+			body("CUSTOMER.ID", equalTo("10")).
+			log().all();
 	}
 
+	
+	
+	
+	
 	/**
 	 * To test xml response for multiple body content
 	 * 
@@ -28,7 +33,7 @@ public class Test1_basics_xml {
 	 * unreadable
 	 */
 	// @Test
-	public void test2() {
+	public void testMultipleContent() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
 		then().
@@ -36,33 +41,48 @@ public class Test1_basics_xml {
 			body("CUSTOMER.FIRSTNAME", equalTo("Sue")).body("CUSTOMER.LASTNAME", equalTo("Fuller")).
 			body("CUSTOMER.STREET", equalTo("135 Upland Pl.")).body("CUSTOMER.CITY", equalTo("Dallas"));
 	}
+	
+	
+	
+	
 
 	/**
 	 * Compare complete text in one go
 	 */
 	// @Test
-	public void test3() {
-		given().get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").then()
-				.body("CUSTOMER.text()", equalTo("10SueFuller135 Upland Pl.Dallas")).log().all();
+	public void testCompleteTextInOneGo() {
+		given().
+			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
+		then().
+			body("CUSTOMER.text()", equalTo("10SueFuller135 Upland Pl.Dallas")).
+			log().all();
 	}
+	
+	
+	
+	
+
 
 	/**
 	 * xpath can also be used to find values
 	 */
 	//@Test
-	public void test4() {
+	public void testUsingXpath1() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
 		then().
 			body(hasXPath("/CUSTOMER/FIRSTNAME", containsString("Sue")));
 	}
+	
+	
+	
 
 	
 	/**
 	 * xpath types
 	 */
 	// @Test
-	public void test5() {
+	public void testUsingXpath2() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/INVOICE/").
 		then().

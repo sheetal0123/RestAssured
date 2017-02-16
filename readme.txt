@@ -35,6 +35,10 @@ https://groups.google.com/forum/#!forum/rest-assured
 4. http://www.groupkt.com/post/5926d648/free-restful-web-service-to-get-location-by-ip-address.htm  	| HTML response
 	http://geo.groupkt.com/ip/172.217.3.14.htm
 
+5. File upload test
+	http://ps.uci.edu/~franklin/doc/file_upload.html
+	https://encodable.com/uploaddemo/
+	http://www.csm-testcenter.org/test?do=show&subdo=common&test=file_upload
 
 #Rest Assured Supported Functionality(Not implemented in examples)
 1. Json schema can be validated using matchesJsonSchemaInClasspath
@@ -43,7 +47,7 @@ https://groups.google.com/forum/#!forum/rest-assured
 imp:
 https://github.com/toddmotto/public-apis
 http://httpbin.org/
-http://httpbin.org/forms/post
+http://httpbin.org/forms/post    | Form POST
 http://stackoverflow.com/questions/4797534/how-do-i-manually-fire-http-post-requests-with-firefox-or-chrome
 http://www.webservicex.com/globalweather.asmx?op=GetWeather
 http://www.webservicex.com/globalweather.asmx?op=GetCitiesByCountry
@@ -52,4 +56,5 @@ https://www.fonts.com/web-fonts/developers/api/generate-token
 
 todo:
 http://www.hascode.com/2011/10/testing-restful-web-services-made-easy-using-the-rest-assured-framework/
+https://semaphoreci.com/community/tutorials/how-to-split-junit-tests-in-a-continuous-integration-environment
 

@@ -6,15 +6,14 @@ import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
 
-public class Test3_schema_check {
+public class Test3_SchemaCheck {
 
-	
 	
 	/**
 	 * verify response type
 	 */
-	@Test
-	public void test() {
+	//@Test
+	public void testContentType() {
 	
 	given().
 		get("http://services.groupkt.com/country/get/iso2code/cn").
@@ -40,7 +39,7 @@ public class Test3_schema_check {
 	public void testSchema() {
 
 		given().get("http://geo.groupkt.com/ip/172.217.4.14/json").then().assertThat()
-				.body(matchesJsonSchemaInClasspath("geo-schema.json"));
+				.body(matchesJsonSchemaInClasspath("test3_geo_schema.json"));
 
 	}
 

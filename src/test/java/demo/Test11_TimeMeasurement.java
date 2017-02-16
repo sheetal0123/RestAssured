@@ -16,7 +16,7 @@ import io.restassured.matcher.ResponseAwareMatcherComposer.*;
  * @author sheetalsingh
  *
  */
-public class Test11_time_measurement {
+public class Test11_TimeMeasurement {
 
 	
 	/**
