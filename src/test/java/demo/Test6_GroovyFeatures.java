@@ -34,9 +34,9 @@ public class Test6_GroovyFeatures {
 	//@Test
 	public void testLengthOfResponse(){
 		when().
-	       get("http://services.groupkt.com/country/search?text=lands").
+	       get("http://services.groupkt.com/country/search?text=islands").
 		then().
-	       body("RestResponse.result.alpha2_code*.length().sum()", greaterThan(31));
+	       body("RestResponse.result.alpha3_code*.length().sum()", greaterThan(40));
 	}
 	
 
@@ -68,10 +68,10 @@ public class Test6_GroovyFeatures {
 	 * The groovy has an implicit variable called 'it' which represents the current item in the list
 	 * 
 	 */
-	//@Test
+	@Test
 	public void testConditionsOnList(){
 		String response = get("http://services.groupkt.com/country/search?text=lands").asString();
-		List<String> ls = from(response).getList("RestResponse.result.findAll { it.name.length() > 40 }.name");
+		List<String> ls = from(response).getList("RestResponse.result.findAll { it.name.length() > 30 }.name");
 		System.out.println(ls);  //[South Georgia and the South Sandwich Islands]
 	}
 	

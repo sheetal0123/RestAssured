@@ -30,7 +30,7 @@ public class Test1_BasicFeatures {
 	//@Test
 	public void testLogging() {
 		given().
-			get("http://services.groupkt.com/country/get/iso2code/cn").
+			get("http://services.groupkt.com/country/get/iso2code/in").
 		then().
 			statusCode(200).
 			log().all();
@@ -44,9 +44,9 @@ public class Test1_BasicFeatures {
 	//@Test
 	public void testEqualToFunction() {
 		given().
-			get("http://services.groupkt.com/country/get/iso2code/cn").
+			get("http://services.groupkt.com/country/get/iso2code/us").
 		then().
-			body("RestResponse.result.name",equalTo("China"));
+			body("RestResponse.result.name",equalTo("United States of America"));
 	}
 	
 	
@@ -74,9 +74,9 @@ public class Test1_BasicFeatures {
 	public void testParametersAndHeaders() {
 		given().
 			param("key1", "value1").
-			header("key2", "value2").
+			header("headA", "valueA").
 		when().
-			get("http://services.groupkt.com/country/get/iso2code/cn").
+			get("http://services.groupkt.com/country/get/iso2code/gb").
 		then().
 			statusCode(200).
 			log().all();

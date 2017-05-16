@@ -22,13 +22,15 @@ public class Test8_GetHeadersAndCookies {
 	/**
 	 * To get response headers
 	 */
-	@Test
+	//@Test
 	public void testResponseHeaders(){
 		Response response = get("http://jsonplaceholder.typicode.com/photos");
 		
 		//to get single header
 		String headerCFRAY = response.getHeader("CF-RAY");
-		System.out.println("Header: "+headerCFRAY);
+		System.out.println(">>>>> Header: "+headerCFRAY);
+		
+		System.out.println("");
 		
 		//to get all headers
 		Headers headers = response.getHeaders();
@@ -63,7 +65,7 @@ public class Test8_GetHeadersAndCookies {
 	/**
 	 * To get detailed cookies
 	 */
-	//@Test
+	@Test
 	public void testDetailedCookies(){
 		Response response = get("http://jsonplaceholder.typicode.com/photos");
 	
@@ -71,6 +73,7 @@ public class Test8_GetHeadersAndCookies {
 		System.out.println("Detailed: "+a.hasExpiryDate());
 		System.out.println("Detailed: "+a.getExpiryDate());
 		System.out.println("Detailed: "+a.hasValue());
+		
 	
 	}
 	

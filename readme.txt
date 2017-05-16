@@ -1,5 +1,5 @@
 Rest Assured framework to test rest web services
-
+Note: RA project is for practice RA with small small modules, used for presentation also in xke or youtube tutorial
 
 #Introduction
 https://github.com/rest-assured/rest-assured/wiki/GettingStarted
@@ -16,12 +16,14 @@ https://groups.google.com/forum/#!forum/rest-assured
 		http://services.groupkt.com/country/search?text=states
 		http://geo.groupkt.com/ip/172.217.4.14/json
 	
+	https://api.apis.guru/v2/list.json
 	
 2. http://jsonplaceholder.typicode.com/  | JSON response
 	http://jsonplaceholder.typicode.com/comments
 	http://jsonplaceholder.typicode.com/photos
 	http://jsonplaceholder.typicode.com/posts/3
 	
+	http://restcountries.eu/rest/v1/name/norway
 	
 	
 3. https://www.predic8.com/rest-demo.htm	| XML response

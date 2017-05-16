@@ -30,16 +30,14 @@ public class Test3_SchemaCheck {
 	/**
 	 * This test will verify the response schema with predefined existing schema
 	 * path: src/test/resources/geo-schema.json
-	 * 
-	 * @todo
-	 * issue: in existing schema,values can be given as anything like blank,
-	 * string, int, double it should validate string, double separately
 	 */
-	//@Test
+	@Test
 	public void testSchema() {
 
-		given().get("http://geo.groupkt.com/ip/172.217.4.14/json").then().assertThat()
-				.body(matchesJsonSchemaInClasspath("test3_geo_schema.json"));
+		given().
+			get("http://geo.groupkt.com/ip/172.217.4.14/json").
+		then().
+			assertThat().body(matchesJsonSchemaInClasspath("test3_geo_schema123.json"));
 
 	}
 

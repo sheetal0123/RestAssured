@@ -30,7 +30,7 @@ public class Test5_ReadResponseInDiffWays {
 	//@Test
 	public void testGetResponseAsInputStream() throws IOException{
 		InputStream stream = get("http://services.groupkt.com/country/get/iso2code/cn").asInputStream(); 
-		System.out.println(stream.toString().length());
+		System.out.println("Stream Length:"+stream.toString().length());
 		stream.close();
 	}
 	
@@ -78,14 +78,14 @@ public class Test5_ReadResponseInDiffWays {
 	//@Test
 	public void testExtractPathInOneLine(){
 		//type 1:
-		String href1= get("http://jsonplaceholder.typicode.com/photos/1").path("url");
-		System.out.println(href1);
+		String href1= get("http://jsonplaceholder.typicode.com/photos/1").path("thumbnailUrl");
+		System.out.println("Fetched URL 1:"+href1);
 		when().get(href1).then().statusCode(200);
 		
 		
 		//type 2:
 		String href2 = get("http://jsonplaceholder.typicode.com/photos/1").andReturn().jsonPath().getString("thumbnailUrl");
-		System.out.println(href2);
+		System.out.println("Fetched URL 2:"+href2);
 		when().get(href2).then().statusCode(200);
 	}
 	
@@ -107,6 +107,7 @@ public class Test5_ReadResponseInDiffWays {
 		System.out.println("Content Type: "+response.contentType());
 		System.out.println("Href: "+response.path("url"));
 		System.out.println("Status Code: "+response.statusCode());
+	
 		
 	}
 	

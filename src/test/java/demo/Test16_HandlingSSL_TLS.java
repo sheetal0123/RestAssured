@@ -57,33 +57,5 @@ public class Test16_HandlingSSL_TLS {
 	}
 	
 	
-	
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -13,9 +13,9 @@ public class Test1_BasicFeaturesForXml {
 	/**
 	 * To test xml response for single body content
 	 */
-	// @Test
+	@Test
 	public void testSingleContent() {
-		given().
+		when().
 			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
 		then().
 			body("CUSTOMER.ID", equalTo("10")).
@@ -32,7 +32,7 @@ public class Test1_BasicFeaturesForXml {
 	 * test can also we written in xpath style i.e. in one line but that may be
 	 * unreadable
 	 */
-	// @Test
+	//@Test
 	public void testMultipleContent() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
@@ -49,7 +49,7 @@ public class Test1_BasicFeaturesForXml {
 	/**
 	 * Compare complete text in one go
 	 */
-	// @Test
+	//@Test
 	public void testCompleteTextInOneGo() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
@@ -81,12 +81,12 @@ public class Test1_BasicFeaturesForXml {
 	/**
 	 * xpath types
 	 */
-	// @Test
+	@Test
 	public void testUsingXpath2() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/INVOICE/").
 		then().
-			body(hasXPath("/INVOICEList/INVOICE[text()='40']"));
+			body(hasXPath("/INVOICEList/INVOICE[text()='40']")).log().all();
 	}
 	
 	

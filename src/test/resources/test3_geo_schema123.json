@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "RestResponse" : {
-    "result" : {
-      "countryIso2" : "string",
+    
+      "countryIso2" : "integer",
       "stateAbbr" : "string",
       "postal" : "string",
       "continent" : "string",
@@ -13,6 +13,6 @@
       "ip" : "string",
       "city" : "string",
       "country" : "string"
-    }
+    
   }
 }

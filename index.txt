@@ -1,5 +1,11 @@
 ### Rest Assured Framework using Java ###
 
+Youtube channels:
+Chapter 1: https://www.youtube.com/watch?v=AbJrfP4ziIk
+Chapter 2: https://www.youtube.com/watch?v=vjxy3KkYihQ
+Chapter 3: https://www.youtube.com/watch?v=5tuWVG2Hz5k
+Chapter 4: https://www.youtube.com/watch?v=P-UrsGeKuMQ
+
 # Topics to be covered
 
 1. Background 
@@ -72,7 +78,7 @@
 18 Multi Part Form Data
 	18.1 Upload a file using rest assured
 	
-	
+
 19. Demo Rest Framework
 
 
