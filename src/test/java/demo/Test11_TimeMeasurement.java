@@ -25,23 +25,26 @@ public class Test11_TimeMeasurement {
 	 * please note time include HTTP round trip + rest assured processing time
 	 * 
 	 */
-	@Test
+	//@Test
 	public void testResponseTime(){
-		long t = given().get("http://jsonplaceholder.typicode.com/photos/1").timeIn(TimeUnit.MILLISECONDS);
-		System.out.println("Time: "+t);
-
-		
-		long timeInMs = given().get("http://jsonplaceholder.typicode.com/photos/").time();
-		System.out.println("Time: "+timeInMs);
-		
-		
-		given().get("http://jsonplaceholder.typicode.com/photos/").then().time(lessThan(2000L));  // 2000 ms
-		
+		long t = given().get("http://jsonplaceholder.typicode.com/photos/").time();
+		System.out.println("Time(ms): "+t);
 	}
 	
 	
 	
+	//@Test
+	public void testResponseTimeInUnit(){
+		long t = given().get("http://jsonplaceholder.typicode.com/photos/1").timeIn(TimeUnit.SECONDS);
+		System.out.println("Time(ms): "+t);
+	}
 	
+	
+	@Test
+	public void testResponseTimeAssertion(){
+		given().get("http://jsonplaceholder.typicode.com/photos/").then().time(lessThan(4000L)); 
+	}
+
 	
 	
 }
