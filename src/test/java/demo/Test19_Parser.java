@@ -37,7 +37,7 @@ public class Test19_Parser {
 	 * Custom parser for - "application/vnd.uoml+xml" type
 	 * Syntax: RestAssured.registerParser(<content-type>, <parser>);
 	 */
-	@Test
+	//@Test
 	public void testCustomParser1(){
 		RestAssured.registerParser("application/vnd.uoml+xml", Parser.XML);
 		RestAssured.unregisterParser("application/vnd.uoml+xml");
@@ -49,7 +49,7 @@ public class Test19_Parser {
 	/**
 	 * Custom Parser - Type 2
 	 */
-	@Test
+	//@Test
 	public void testCustomParser2(){
 		given().get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/02/").then().using().parser("application/vnd.uoml+xml", Parser.XML);
 	}

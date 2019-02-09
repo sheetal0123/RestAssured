@@ -28,7 +28,7 @@ import io.restassured.matcher.ResponseAwareMatcherComposer.*;
 public class Test16_HandlingSSL_TLS {
 	
 	
-	@BeforeClass
+	//@BeforeClass
 	public void setup(){
 		RestAssured.useRelaxedHTTPSValidation();
 	}
@@ -51,7 +51,7 @@ public class Test16_HandlingSSL_TLS {
 	/**
 	 * We can also handle TLS protocol using an overloaded method
 	 */
-	@Test
+	//@Test
 	public void testTLS(){
 		given().relaxedHTTPSValidation("TLS").when().get("https://services.groupkt.com/country/get/iso3code/ita");
 	}

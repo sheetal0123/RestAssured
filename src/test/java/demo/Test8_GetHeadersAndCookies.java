@@ -65,7 +65,7 @@ public class Test8_GetHeadersAndCookies {
 	/**
 	 * To get detailed cookies
 	 */
-	@Test
+	//@Test
 	public void testDetailedCookies(){
 		Response response = get("http://jsonplaceholder.typicode.com/photos");
 	
@@ -73,8 +73,6 @@ public class Test8_GetHeadersAndCookies {
 		System.out.println("Detailed: "+a.hasExpiryDate());
 		System.out.println("Detailed: "+a.getExpiryDate());
 		System.out.println("Detailed: "+a.hasValue());
-		
-	
 	}
 	
 	

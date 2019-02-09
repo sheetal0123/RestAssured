@@ -19,7 +19,7 @@ public class Test12_ResponseSpecBuilder {
 	
 	ResponseSpecification responseSpec;
 	
-	@BeforeClass
+	//@BeforeClass
 	public void setup(){
 		ResponseSpecBuilder builder = new ResponseSpecBuilder();
 		builder.expectStatusCode(200);
@@ -27,7 +27,7 @@ public class Test12_ResponseSpecBuilder {
 		responseSpec = builder.build();
 	}
 	
-	@Test
+	//@Test
 	public void testResponse1(){
 		when().
 		       get("http://services.groupkt.com/country/get/iso2code/in").
@@ -36,7 +36,7 @@ public class Test12_ResponseSpecBuilder {
 	}
 	
 	
-	@Test
+	//@Test
 	public void testResponse2(){
 		when().
 		       get("http://services.groupkt.com/country/get/iso2code/cn").

@@ -14,7 +14,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * simply checking status code
 	 */
-	//@Test
+	@Test
 	public void testStatusCode() {
 		given().
 			get("http://jsonplaceholder.typicode.com/posts/3").

@@ -100,41 +100,9 @@ public class Test10_VerifyResponse {
 	 * todo: Not working 
 	 * cookie value changing, need diff call
 	 */
-	@Test
+	//@Test
 	public void testCookiesInResponse(){
 		given().get("http://jsonplaceholder.typicode.com/comments").then().log().all().assertThat().cookie("__cfduid","db8a58dc77654193b3bbd9bba0c7642a81486464587");
 	}
 	
-	
-
-	
-	
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

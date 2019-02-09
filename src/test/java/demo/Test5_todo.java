@@ -35,7 +35,7 @@ public class Test5_todo {
 	/**
 	 * todo: not working
 	 */
-	@Test
+	//@Test
 	public void testX2() {
 		given().
 			get("http://httpbin.org/xml").
@@ -48,7 +48,7 @@ public class Test5_todo {
 	/**
 	 * todo: Schema and DTD validation
 	 */
-	// @Test
+	//@Test
 	public void testX1() {
 		// get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").then().assertThat().body(matchesXsd(xsd));
 		// get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").then().assertThat().body(matchesDtd(dtd));

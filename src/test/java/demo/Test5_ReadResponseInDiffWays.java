@@ -95,7 +95,7 @@ public class Test5_ReadResponseInDiffWays {
 	/**
 	 * Extract details as Response for further use
 	 */
-	@Test
+	//@Test
 	public void testExtractDetailsUsingResponse(){
 		Response response=
 		when().
@@ -108,10 +108,5 @@ public class Test5_ReadResponseInDiffWays {
 		System.out.println("Href: "+response.path("url"));
 		System.out.println("Status Code: "+response.statusCode());
 	
-		
 	}
-	
-	
-	
-	
 }

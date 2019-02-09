@@ -57,7 +57,7 @@ public class Test14_Logging {
 	/**
 	 * Conditional Logging
 	 */
-	@Test
+	//@Test
 	public void testLogging3(){
 		given().
 	    	get("http://api.fonts.com/rest/json/Domains/").

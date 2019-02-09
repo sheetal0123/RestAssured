@@ -23,6 +23,7 @@ import io.restassured.specification.ResponseSpecification;
 import io.restassured.matcher.ResponseAwareMatcher;
 import io.restassured.matcher.RestAssuredMatchers.*;
 import io.restassured.matcher.ResponseAwareMatcherComposer.*;
+
 /**
  * Serialization can be done in different ways in Rest Assured
  * 
@@ -81,8 +82,7 @@ public class Test17_Serialization {
 	 */
 	//@Test
 	public void testSerializationUsingContentType(){
-		
-		ZebraRequestClass obj = new ZebraRequestClass();
+		ZebraRequestClassNew obj = new ZebraRequestClassNew();
 		obj.setAge(10);
 		obj.setWeight(100);
 		obj.setHome("India");
@@ -102,18 +102,14 @@ public class Test17_Serialization {
 	
 	
 	
-	
-	
-	
-	
 	/**
 	 * Serialization can also be done using explicit serializer
 	 * Here we are converting java object into json using jackson 2
 	 */
-	@Test
+	//@Test
 	public void testSerializationUsingExplicitSerializer(){
 		
-		ZebraRequestClass obj = new ZebraRequestClass();
+		ZebraRequestClassNew obj = new ZebraRequestClassNew();
 		obj.setAge(1);
 		obj.setWeight(10);
 		obj.setHome("India");
@@ -127,34 +123,5 @@ public class Test17_Serialization {
     		.contentType("application/xml").log().all();
 
 	}
-	
-	
-	
-	
+		
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

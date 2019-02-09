@@ -60,7 +60,7 @@ public class Test2_SettingRoot {
 	/**
 	 * We can detach root path in between
 	 */
-	@Test
+	//@Test
 	public void testDetachRoot(){
 		given().
 	    	get("http://services.groupkt.com/country/get/iso3code/ita").

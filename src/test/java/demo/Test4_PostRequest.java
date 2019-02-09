@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class Test4_PostRequest {
 
 	
-	@Test
+	//@Test
 	public void testPostReq(){
 		
 		given().

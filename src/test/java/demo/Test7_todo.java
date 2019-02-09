@@ -16,7 +16,7 @@ public class Test7_todo {
 	/**
 	 * todo: Need to change url
 	 */
-	@Test
+	//@Test
 	public void todo(){
 		String xml = get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/02/").andReturn().asString();
 		String firstName = from(xml).get("CUSTOMER.FIRSTNAME");

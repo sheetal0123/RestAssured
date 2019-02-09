@@ -40,7 +40,7 @@ public class Test23_MultiForm {
 	 * Rest assured will automatically identify the element
 	 * 
 	 */
-	@Test
+	//@Test
 	public void testUploadFileWithDefaultWebElement(){
 		given().
         	multiPart(new File("/Users/sheetalsingh/Desktop/abc.txt")).
@@ -48,49 +48,6 @@ public class Test23_MultiForm {
         	post("http://www.csm-testcenter.org/test?do=show&subdo=common&test=file_upload").
         then().
         	statusCode(200);
-		
-		
-		
-	
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -28,7 +28,7 @@ public class Test21_FormAuthentications {
 	 * 
  	 * This case may or may not work based upon web page complexity
 	 */
-	@Test
+	//@Test
 	public void testFormAuthenticationByParsingWebPage(){
 		given().
         	auth().form("John", "Smith").
@@ -47,7 +47,7 @@ public class Test21_FormAuthentications {
 	 * 
 	 * No additional call would be made by Rest Assured to parse page 
 	 */
-	@Test
+	//@Test
 	public void testFormAuthenticationUsingFormAuthConfig(){
 		given().
         	auth().form("John", "Smith", new FormAuthConfig("/j_spring_security_check", "j_username", "j_password")).
@@ -65,7 +65,7 @@ public class Test21_FormAuthentications {
 	/**
 	 * Used in case we are using default Spring Security properties
 	 */
-	@Test
+	//@Test
 	public void testFormAuthenticationUsingSpringSecurity(){
 		given().
         	auth().form("John", "Smith", FormAuthConfig.springSecurity()).
@@ -78,29 +78,3 @@ public class Test21_FormAuthentications {
 	}	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

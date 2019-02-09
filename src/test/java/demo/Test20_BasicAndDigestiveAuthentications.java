@@ -26,7 +26,7 @@ public class Test20_BasicAndDigestiveAuthentications {
 	 * credentials passed to server in headers along with rest of the details
 	 * 
 	 */
-	@Test
+	//@Test
 	public void testBasicChallengedAuthentication(){
 		given().auth().basic("username", "password").when().get("http://services.groupkt.com/country/get/all").then().statusCode(200);
 	}
@@ -39,7 +39,7 @@ public class Test20_BasicAndDigestiveAuthentications {
 	/**
 	 * Preemptive Basic Authentication : credential will be passed to server before it ask 
 	 */
-	@Test
+	//@Test
 	public void testBasicPreemptiveAuthentication1(){
 		given().auth().preemptive().basic("username", "password").when().get("http://services.groupkt.com/country/get/all").then().statusCode(200);		
 	}
@@ -54,7 +54,7 @@ public class Test20_BasicAndDigestiveAuthentications {
 	/**
 	 * Authentication can be set for all calls 
 	 */
-	@Test
+	//@Test
 	public void testBasicAuthentication(){
 		RestAssured.authentication = basic("username", "password");
 		given().get("http://services.groupkt.com/country/get/all").then().statusCode(200);
@@ -75,7 +75,7 @@ public class Test20_BasicAndDigestiveAuthentications {
 	 * 
 	 * To know more there is lot of content available in Google
 	 */
-	@Test
+	//@Test
 	public void testDigestiveAuthentication(){
 		given().auth().digest("username", "password").when().get("http://services.groupkt.com/country/get/all").then().statusCode(200);
 		

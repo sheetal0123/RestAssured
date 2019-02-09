@@ -68,13 +68,11 @@ public class Test6_GroovyFeatures {
 	 * The groovy has an implicit variable called 'it' which represents the current item in the list
 	 * 
 	 */
-	@Test
+	//@Test
 	public void testConditionsOnList(){
 		String response = get("http://services.groupkt.com/country/search?text=lands").asString();
 		List<String> ls = from(response).getList("RestResponse.result.findAll { it.name.length() > 30 }.name");
 		System.out.println(ls);  //[South Georgia and the South Sandwich Islands]
 	}
-	
-	
 	
 }

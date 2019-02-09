@@ -40,7 +40,7 @@ public class Test11_TimeMeasurement {
 	}
 	
 	
-	@Test
+	//@Test
 	public void testResponseTimeAssertion(){
 		given().get("http://jsonplaceholder.typicode.com/photos/").then().time(lessThan(4000L)); 
 	}

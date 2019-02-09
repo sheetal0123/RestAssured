@@ -13,7 +13,7 @@ package demo;
 	 }
  * 
  */
-public class ZebraRequestClass {
+public class ZebraRequestClassNew {
 	int age;
 	int weight;
 	String home;

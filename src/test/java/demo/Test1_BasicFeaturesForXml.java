@@ -13,7 +13,7 @@ public class Test1_BasicFeaturesForXml {
 	/**
 	 * To test xml response for single body content
 	 */
-	@Test
+	//@Test
 	public void testSingleContent() {
 		when().
 			get("http://www.thomas-bayer.com/sqlrest/CUSTOMER/10/").
@@ -81,7 +81,7 @@ public class Test1_BasicFeaturesForXml {
 	/**
 	 * xpath types
 	 */
-	@Test
+	//@Test
 	public void testUsingXpath2() {
 		given().
 			get("http://www.thomas-bayer.com/sqlrest/INVOICE/").

@@ -31,7 +31,7 @@ public class Test13_RequestSpecBuilder {
 	
 	RequestSpecification requestSpec;
 	
-	@BeforeClass
+	//@BeforeClass
 	public void setup(){
 		RequestSpecBuilder builder = new RequestSpecBuilder();
 		builder.addParam("parameter1", "parameterValue");
@@ -41,7 +41,7 @@ public class Test13_RequestSpecBuilder {
 	
 	
 	
-	@Test
+	//@Test
 	public void testRequest1(){
 		given().
 			spec(requestSpec).
@@ -54,7 +54,7 @@ public class Test13_RequestSpecBuilder {
 
 	
 	
-	@Test
+	//@Test
 	public void testRequest2(){
 		given().
 	    	spec(requestSpec).

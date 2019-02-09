@@ -31,7 +31,7 @@ public class Test3_SchemaCheck {
 	 * This test will verify the response schema with predefined existing schema
 	 * path: src/test/resources/geo-schema.json
 	 */
-	@Test
+	//@Test
 	public void testSchema() {
 
 		given().
@@ -40,8 +40,4 @@ public class Test3_SchemaCheck {
 			assertThat().body(matchesJsonSchemaInClasspath("test3_geo_schema123.json"));
 
 	}
-
-	
-	
-	
 }

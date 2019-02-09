@@ -27,7 +27,7 @@ public class Test22_CSRF_OAuth {
 
 	
 	//Cases will not run as we don't have proper URL
-	@Test
+	//@Test
 	public void testCSRF(){
 		given().
 			auth().form("John", "Doe", FormAuthConfig.formAuthConfig().withAutoDetectionOfCsrf()).
@@ -48,7 +48,7 @@ public class Test22_CSRF_OAuth {
 	 * 
 	 * Note: can be used in case we are using spring security default values
 	 */
-	@Test
+	//@Test
 	public void testWithSpringSecurityAsFormParameter(){
 		given().
 			auth().form("John", "Doe", FormAuthConfig.springSecurity().withCsrfFieldName("_csrf")).
@@ -63,7 +63,7 @@ public class Test22_CSRF_OAuth {
 	 * To send CSRF token as header value rather default form parameter
 	 * 
 	 */
-	@Test
+	//@Test
 	public void testCSRFWithSpringSecurityAsHeader(){
 		given().
 			auth().form("John", "Doe", FormAuthConfig.springSecurity().withCsrfFieldName("_csrf").sendCsrfTokenAsHeader()).
@@ -78,7 +78,7 @@ public class Test22_CSRF_OAuth {
 	
 	//-------------------------------------------- OAuth Authentication -------------------------------------------------------//
 	
-	@Test
+	//@Test
 	public void testOAuth(){
 		given().
 			auth().oauth("", "", "", "").
@@ -95,7 +95,7 @@ public class Test22_CSRF_OAuth {
 	 * This is preemptive in nature i.e. credentials is passed to server in first call itself
 	 * In challenge approach credential passed in second call when server ask for it
 	 */
-	@Test
+	//@Test
 	public void testOAuth2(){
 		given().
 			auth().oauth2("access token").
@@ -117,29 +117,3 @@ public class Test22_CSRF_OAuth {
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

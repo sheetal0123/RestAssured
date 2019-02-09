@@ -9,7 +9,7 @@ import io.restassured.RestAssured;
 
 public class Test15_BeforeClass {
 
-	@BeforeClass
+	//@BeforeClass
 	public void setup() {
 		RestAssured.baseURI = "http://services.groupkt.com";
 		RestAssured.basePath = "/country";
@@ -34,7 +34,7 @@ public class Test15_BeforeClass {
 	 * Here we need to get only end points, as baseuri and basepath will be
 	 * picked from BeforeClass
 	 */
-	@Test
+	//@Test
 	public void test1() {
 		given().get("/get/iso2code/in").then().statusCode(200).log().all();
 	}

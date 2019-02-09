@@ -36,7 +36,7 @@ public class Test7_JsonPath {
 	/**
 	 * Extract details as String and fetching further details using JSONPath
 	 */
-	@Test
+	//@Test
 	public void testJsonPath2(){
 		String json=
 				when().

@@ -40,7 +40,7 @@ public class Test18_Deserialization {
 	//@Test
 	public void testDeserializationUsingContentType(){
 		
-		ZebraRequestClass reqObj = new ZebraRequestClass();
+		ZebraRequestClassNew reqObj = new ZebraRequestClassNew();
 		reqObj.setAge(5);
 		reqObj.setWeight(50);
 		reqObj.setHome("India");
@@ -98,29 +98,3 @@ public class Test18_Deserialization {
 	
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
