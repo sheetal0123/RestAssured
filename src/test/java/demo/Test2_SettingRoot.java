@@ -29,10 +29,11 @@ public class Test2_SettingRoot {
 	/**
 	 * Basic way to test all parameters
 	 */
-	//@Test
+	@Test
 	public void testWithoutRoot(){
+		System.out.println("******************Setting Root: Test 3****************************");
 		given().
-	    	get("http://services.groupkt.com/country/get/iso3code/ita").
+	    	get("http://services.groupkt.com/country/get/iso3code/ITA").
 	    then().
 	    	body("RestResponse.result.name", is("Italy")).
 	    	body("RestResponse.result.alpha2_code", is("IT")).
@@ -44,10 +45,11 @@ public class Test2_SettingRoot {
 	/**
 	 * Recommended way to test all parameters using root feature
 	 */
-	//@Test
+	@Test
 	public void testWithRoot(){
+		System.out.println("******************Setting Root: Test 4****************************");
 		given().
-	    	get("http://services.groupkt.com/country/get/iso3code/ita").
+	    	get("http://services.groupkt.com/country/get/iso3code/ITA").
 	    then().
 	    	root("RestResponse.result").
 	    	body("name", is("Italy")).
@@ -63,7 +65,7 @@ public class Test2_SettingRoot {
 	//@Test
 	public void testDetachRoot(){
 		given().
-	    	get("http://services.groupkt.com/country/get/iso3code/ita").
+	    	get("http://services.groupkt.com/country/get/iso3code/ITA").
 	    then().
 	    	root("RestResponse.result").
 	    	body("name", is("Italy")).

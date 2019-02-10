@@ -16,6 +16,7 @@ public class Test1_BasicFeatures {
 	 */
 	@Test
 	public void testStatusCode() {
+		System.out.println("******************Basic 200 : Test 1****************************");
 		given().
 			get("http://jsonplaceholder.typicode.com/posts/3").
 		then().
@@ -55,8 +56,9 @@ public class Test1_BasicFeatures {
 	/**
 	 * verifying multiple content using org.hamcrest.Matchers library
 	 */
-	//@Test
+	@Test
 	public void testHasItemFunction() {
+		System.out.println("******************Basic Has Item: Test 2****************************");
 		given().
 			get("http://services.groupkt.com/country/get/all").
 		then().
