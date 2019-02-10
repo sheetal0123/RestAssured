@@ -47,7 +47,7 @@ public class Test2_SettingRoot {
 	 */
 	@Test
 	public void testWithRoot(){
-		System.out.println("******************Setting Root: Test 4****************************");
+		System.out.println("******************Setting Root: Test 4 ****************************");
 		given().
 	    	get("http://services.groupkt.com/country/get/iso3code/ITA").
 	    then().
