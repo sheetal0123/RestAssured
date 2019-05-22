@@ -30,12 +30,13 @@ public class Test14_Logging {
 	//@Test
 	public void testLogging1(){
 		given().
-	    	get("http://services.groupkt.com/country/get/iso2code/gb").
-	    then().
-	    	//log().all();
-	    	//log().body();
-	    	//log().cookies();
-	    	log().headers();
+	    	get("http://services.groupkt.com/country/search?text=states").
+	    then()
+	    	//.log().headers();
+    		//.log().body();
+	    	//.log().cookies();
+	    	.log().all();
+
 	}
 	
 	
@@ -57,13 +58,12 @@ public class Test14_Logging {
 	/**
 	 * Conditional Logging
 	 */
-	//@Test
+	@Test
 	public void testLogging3(){
 		given().
 	    	get("http://api.fonts.com/rest/json/Domains/").
 	    then().
 	    	log().ifStatusCodeIsEqualTo(400);
-			//log().ifStatusCodeMatches(matcher); // Only log if the status code matches the supplied Hamcrest matcher
 	}
 
 }

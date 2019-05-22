@@ -1,6 +1,8 @@
 package demo;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.lessThan;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -19,29 +21,32 @@ public class Test12_ResponseSpecBuilder {
 	
 	ResponseSpecification responseSpec;
 	
-	//@BeforeClass
+	@BeforeClass
 	public void setup(){
 		ResponseSpecBuilder builder = new ResponseSpecBuilder();
 		builder.expectStatusCode(200);
-		builder.expectHeader("Content-Encoding", "gzip");
+		builder.expectHeader("Content-Type", "application/json;charset=UTF-8");
+		builder.expectHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
 		responseSpec = builder.build();
 	}
 	
-	//@Test
+
+	@Test
 	public void testResponse1(){
-		when().
-		       get("http://services.groupkt.com/country/get/iso2code/in").
-		then().
-		       spec(responseSpec);
+		when()
+		       .get("http://services.groupkt.com/country/search?text=india").
+		then()
+		       .spec(responseSpec)
+		       .time(lessThan(4000L));
 	}
 	
 	
-	//@Test
+	@Test
 	public void testResponse2(){
-		when().
-		       get("http://services.groupkt.com/country/get/iso2code/cn").
-		then().
-		       spec(responseSpec);
+		when()
+		       .get("http://services.groupkt.com/country/search?text=states").
+		then()
+		       .spec(responseSpec);
 	}
 	
 }

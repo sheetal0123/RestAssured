@@ -11,6 +11,10 @@ import io.restassured.response.Response;
 public class Test1_BasicFeatures {
 
 
+	public static void main(String [] arga){
+		System.out.println("Hi");
+	}
+
 	/**
 	 * simply checking status code
 	 */
@@ -28,7 +32,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * it will verify code and print complete response in console
 	 */
-	//@Test
+	@Test
 	public void testLogging() {
 		given().
 			get("http://services.groupkt.com/country/get/iso2code/in").

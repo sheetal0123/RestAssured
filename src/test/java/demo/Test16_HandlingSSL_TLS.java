@@ -28,7 +28,7 @@ import io.restassured.matcher.ResponseAwareMatcherComposer.*;
 public class Test16_HandlingSSL_TLS {
 	
 	
-	//@BeforeClass
+	@BeforeClass
 	public void setup(){
 		RestAssured.useRelaxedHTTPSValidation();
 	}
@@ -40,9 +40,10 @@ public class Test16_HandlingSSL_TLS {
 	 * 
 	 * Don't have any proper url to test this feature
 	 */
-	//@Test
-	public void testSSL(){
-		given().relaxedHTTPSValidation().when().get("https://services.groupkt.com/country/get/iso3code/ita");
+	@Test
+	public void testSSL1(){
+		given().relaxedHTTPSValidation().when().get("http://www.bupa.com.au/");
+		//given().get("http://freegeoip.net:80/").then().statusCode(200);
 	}
 	
 
@@ -52,10 +53,10 @@ public class Test16_HandlingSSL_TLS {
 	 * We can also handle TLS protocol using an overloaded method
 	 */
 	//@Test
-	public void testTLS(){
-		given().relaxedHTTPSValidation("TLS").when().get("https://services.groupkt.com/country/get/iso3code/ita");
-	}
-	
+//	public void testTLS(){
+//		given().relaxedHTTPSValidation("TLS").when().get("https://services.groupkt.com/country/get/iso3code/ita");
+//	}
+//	
 	
 }
 

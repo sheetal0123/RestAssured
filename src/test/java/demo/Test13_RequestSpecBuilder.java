@@ -31,7 +31,7 @@ public class Test13_RequestSpecBuilder {
 	
 	RequestSpecification requestSpec;
 	
-	//@BeforeClass
+	@BeforeClass
 	public void setup(){
 		RequestSpecBuilder builder = new RequestSpecBuilder();
 		builder.addParam("parameter1", "parameterValue");
@@ -41,20 +41,21 @@ public class Test13_RequestSpecBuilder {
 	
 	
 	
-	//@Test
+	@Test
 	public void testRequest1(){
 		given().
 			spec(requestSpec).
 		when().
 	    	get("https://api.fonts.com/rest/json/Accounts/").
 	    then().
-			statusCode(400);
+			statusCode(400).
+			log().all();
 	}
 	
 
 	
 	
-	//@Test
+	@Test
 	public void testRequest2(){
 		given().
 	    	spec(requestSpec).

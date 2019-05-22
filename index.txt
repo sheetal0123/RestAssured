@@ -50,7 +50,7 @@ Chapter 8: https://www.youtube.com/watch?v=lhRzNSuKDaA
 	10.1 Assertions on headers, cookies etc
 	10.2 Using Lambda expressions (Java 8)
 
-11. Time measurement
+11. Time measurement  (Chapter 8)
 
 12. Specification Builders	
 	12.1 Response Spec Builder

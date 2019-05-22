@@ -9,7 +9,7 @@ import io.restassured.RestAssured;
 
 public class Test15_BeforeClass {
 
-	//@BeforeClass
+	@BeforeClass
 	public void setup() {
 		RestAssured.baseURI = "http://services.groupkt.com";
 		RestAssured.basePath = "/country";
@@ -36,7 +36,12 @@ public class Test15_BeforeClass {
 	 */
 	//@Test
 	public void test1() {
-		given().get("/get/iso2code/in").then().statusCode(200).log().all();
+		given().get("/search?text=united").then().statusCode(200).log().all();
+	}
+	
+	@Test
+	public void test2() {
+		given().get("/get/all").then().statusCode(200).log().headers();
 	}
 
 }
