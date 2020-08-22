@@ -39,18 +39,19 @@ public class Test18_Deserialization {
 	 */
 	//@Test
 	public void testDeserializationUsingContentType(){
-		
+		//Java Obj
 		ZebraRequestClassNew reqObj = new ZebraRequestClassNew();
 		reqObj.setAge(5);
 		reqObj.setWeight(50);
 		reqObj.setHome("India");
 		
+		//De serialization using .as() method
 		ZebraResponseClass respObj = 
 		given()
     		.body(reqObj).
     	when()
     		.post("http://www.thomas-bayer.com/restnames/countries.groovy")
-    		.as(ZebraResponseClass.class);
+    		.as(ZebraResponseClass.class);  // Json -> Java Obj
 	
 		
 		//some assertions on response

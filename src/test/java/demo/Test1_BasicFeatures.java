@@ -5,8 +5,8 @@ import static org.hamcrest.Matchers.*;
 
 import org.testng.annotations.Test;
 
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
+//import io.restassured.http.ContentType;
+//import io.restassured.response.Response;
 
 public class Test1_BasicFeatures {
 
@@ -32,7 +32,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * it will verify code and print complete response in console
 	 */
-	@Test
+	//@Test
 	public void testLogging() {
 		given().
 			get("http://services.groupkt.com/country/get/iso2code/in").
@@ -60,7 +60,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * verifying multiple content using org.hamcrest.Matchers library
 	 */
-	@Test
+	//@Test
 	public void testHasItemFunction() {
 		System.out.println("******************Basic Has Item: Test 2****************************");
 		given().

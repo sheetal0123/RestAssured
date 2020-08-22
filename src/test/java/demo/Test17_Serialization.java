@@ -27,6 +27,8 @@ import io.restassured.matcher.ResponseAwareMatcherComposer.*;
 /**
  * Serialization can be done in different ways in Rest Assured
  * 
+ * Java Obj -> File/String
+ * 
  * @author sheetalsingh
  *
  *
@@ -53,11 +55,13 @@ public class Test17_Serialization {
 	 */
 	//@Test
 	public void testSerializationUsingHashMap() {
+		//Java Object
         Map<String,String> inputJson = new HashMap<>();
         inputJson.put("firstName", "A");
         inputJson.put("LastName", "B");
         inputJson.put("Age", "30");
 
+        //Serialization : Java obj -> Json
         given()
         	.contentType("application/json")
         	.body(inputJson).
@@ -82,11 +86,14 @@ public class Test17_Serialization {
 	 */
 	//@Test
 	public void testSerializationUsingContentType(){
+		//Java Obj
 		ZebraRequestClassNew obj = new ZebraRequestClassNew();
 		obj.setAge(10);
 		obj.setWeight(100);
 		obj.setHome("India");
 		
+		
+		//Serialization : Java obj -> Json
 		given()
 			.contentType("application/json")
     		.body(obj).
@@ -95,7 +102,6 @@ public class Test17_Serialization {
     	then()
     		.statusCode(200)
     		.contentType("application/xml").log().all();
-
 	}
 
 	
