@@ -60,3 +60,68 @@ todo:
 http://www.hascode.com/2011/10/testing-restful-web-services-made-easy-using-the-rest-assured-framework/
 https://semaphoreci.com/community/tutorials/how-to-split-junit-tests-in-a-continuous-integration-environment
 
+
+
+
+************************************
+todo:
+
+1. add : api.txt 633 code snippets
+2. Auto generate pojos
+
+steps:
+1. place schema in some folders
+2. pom.xml entry plugin entry
+3. Add generated pojo folder as src folder in mvn 
+
+#To generate pojos
+mvn clean install -DskipTests=true -Djib.skip=true
+
+generated folder: com.generated.pojos.request
+path: \target\generated-sources\jsonschema2pojo\com\generated\pojos\request
+
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>1.0.2</version>
+
+                <executions>
+                    <execution>
+                        <id>sessionreq</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${basedir}/src/test/resources/schema/request</sourceDirectory>
+                            <targetPackage>com.generated.pojos.request</targetPackage>
+                            <useCommonsLang3>true</useCommonsLang3>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>sessionresp</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${basedir}/src/test/resources/schema/response</sourceDirectory>
+                            <targetPackage>com.generated.pojos.response</targetPackage>
+                            <useCommonsLang3>true</useCommonsLang3>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+
+
+
+
+
+
