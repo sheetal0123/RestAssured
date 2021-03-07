@@ -1,12 +1,12 @@
 {
     "Bob": {
-        "firstname": "Boby",
-        "lastname": "Bryan",
-        "age": "35",
+        "firstname": "Blue",
+        "lastname": "Ocean",
+        "age": "36",
         "skills": ["Java","Maven","Api"],
         "address": {
-        	"hno": "101",
-        	"street": "park street"
+        	"hno": "4k",
+        	"street": "Europa, Malaga"
     	}
     },
     "Fed": {

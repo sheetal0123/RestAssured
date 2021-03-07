@@ -9,7 +9,6 @@ import java.util.List;
  * @author Sheetal_Singh
  */
 public class User {
-
 	
 	String firstName;
 	String lastName;

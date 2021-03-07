@@ -61,7 +61,8 @@ http://www.hascode.com/2011/10/testing-restful-web-services-made-easy-using-the-
 https://semaphoreci.com/community/tutorials/how-to-split-junit-tests-in-a-continuous-integration-environment
 
 
-
+#Working
+https://petstore.swagger.io/v2/pet/findByStatus?status=available
 
 ************************************
 todo:

@@ -11,11 +11,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * Json File -> URI -> URL -> JsonNode 
  * 
- * ref: https://www.boraji.com/java-how-to-convert-file-to-url
- * 
  * @author Sheetal_Singh
  */
-public class JsonUrl2 {
+public class ReadJsonFromWebUrl2 {
 
 	public static void jsonFileURLBasic() throws IOException {
 		File file = new File("./src/test/java/jackson/features/users.json");
@@ -29,6 +27,7 @@ public class JsonUrl2 {
 		URL url = uri.toURL();
 		System.out.println("URL: " + url.toString());
 
+		// URL -> jsonNode
 		ObjectMapper objectMapper = new ObjectMapper();
 		JsonNode jsonNode = objectMapper.readValue(url, JsonNode.class);
 		JsonNode nodeBob = jsonNode.get("Bob");

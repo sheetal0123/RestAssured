@@ -13,8 +13,8 @@ public class UserTestCode {
 
 	public static void main(String[] args) {
 		//Initializing Java Object
-		UserAddress userAddress = new UserAddress("Main Street", "42A", "Magdeburg", "Germany");
-		UserNested javaObject = new UserNested("Norman", "norman@futurestud.io", true, 26, userAddress);
+		UserAddress userAddress = new UserAddress("Main Street", "100", "Malaga", "Spain");
+		UserNested javaObject = new UserNested("Sheetal", "norman@futurestud.io", true, 26, userAddress);
 
 		Gson gson = new Gson();
 		String userWithAddressJson = gson.toJson(javaObject);

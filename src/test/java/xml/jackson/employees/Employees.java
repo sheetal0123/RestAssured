@@ -2,7 +2,6 @@ package xml.jackson.employees;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import java.util.Arrays;
 
 @JacksonXmlRootElement(localName = "employees") 
 public class Employees {

@@ -21,7 +21,7 @@ public class Test10_VerifyResponse {
 	/**
 	 * status code verification
 	 */
-	//@Test
+	@Test
 	public void testStatusInResponse(){
 		given().get("http://jsonplaceholder.typicode.com/photos/").then().assertThat().statusCode(200);
 		given().get("http://jsonplaceholder.typicode.com/photos/").then().assertThat().statusLine("HTTP/1.1 200 OK");

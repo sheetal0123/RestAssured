@@ -2,18 +2,10 @@ package demo;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
-
 import org.testng.annotations.Test;
-
-//import io.restassured.http.ContentType;
-//import io.restassured.response.Response;
 
 public class Test1_BasicFeatures {
 
-
-	public static void main(String [] arga){
-		System.out.println("Hi");
-	}
 
 	/**
 	 * simply checking status code
@@ -32,7 +24,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * it will verify code and print complete response in console
 	 */
-	//@Test
+	@Test
 	public void testLogging() {
 		given().
 			get("http://services.groupkt.com/country/get/iso2code/in").
@@ -46,7 +38,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * verifying single content using org.hamcrest.Matchers library's equalTo method
 	 */
-	//@Test
+	@Test
 	public void testEqualToFunction() {
 		given().
 			get("http://services.groupkt.com/country/get/iso2code/us").
@@ -60,7 +52,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * verifying multiple content using org.hamcrest.Matchers library
 	 */
-	//@Test
+	@Test
 	public void testHasItemFunction() {
 		System.out.println("******************Basic Has Item: Test 2****************************");
 		given().
@@ -76,7 +68,7 @@ public class Test1_BasicFeatures {
 	/**
 	 * parameters and headers can be set
 	 */
-	//@Test
+	@Test
 	public void testParametersAndHeaders() {
 		given().
 			param("key1", "value1").
@@ -96,7 +88,7 @@ public class Test1_BasicFeatures {
 	 * using 'and' to increase readability 
 	 * generally used when writing in one line xpath style
 	 */
-	//@Test
+	@Test
 	public void testAndFeatureForReadability() {
 		given().param("key1", "value1").and().header("key2", "value2").when().get("http://services.groupkt.com/country/get/iso2code/cn").then().statusCode(200).and().body("RestResponse.result.alpha3_code", equalTo("CHN"));
 	}

@@ -26,7 +26,10 @@ public class UserTestClass {
 		ObjectMapper objmapper = new ObjectMapper();
 		User user = objmapper.readValue(new File(path), User.class);
 		
+		//user.getAddress().getCity()
+		
 		Assert.assertEquals(user.getAge().intValue(), 25,"User age is wrong");
+		
 		assert user.getphoneNumbers().size() == 3 : "User has more or less phone numbers";
 		System.out.println("Done");
 	}
